@@ -50,6 +50,7 @@ if __name__ == "__main__":
     # email = parser.parsestr(text1)
 
     users = [f for f in listdir("./data") if not isfile(join("./data", f))]
+    print users
     directories = [f for f in listdir("./allen-p") if not isfile(join("./allen-p", f))]
     print directories
     allfiles = dict()

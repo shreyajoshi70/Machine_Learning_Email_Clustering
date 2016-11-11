@@ -10,7 +10,6 @@ import copy
 
 class Email:
     def __init__(self, msg):
-
         # Get separate parts from the email
         self.Head_To = msg.__getitem__("To")
         self.Head_From = msg.__getitem__("From")
@@ -52,9 +51,9 @@ if __name__ == "__main__":
 
     # Get all the files into a dictionary
     for user in users:
-        userDirectories = [f for f in listdir("./data/"+user) if not isfile(join("./data/"+user, f))]
+        userDirectories = [f for f in listdir("./data/" + user) if not isfile(join("./data/" + user, f))]
         for folder in userDirectories:
-            folderPath = "./data/"+user+"/"+folder
+            folderPath = "./data/" + user + "/" + folder
             files = [f for f in listdir(folderPath) if isfile(join(folderPath, f))]
             temp[folder] = files
             total += len(files)
